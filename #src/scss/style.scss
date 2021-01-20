@@ -480,3 +480,33 @@ a{
         padding: 12px 57px;
     }
 }
+
+.footer{
+    background-color: #fff;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 129%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #202020;
+    }
+
+    &__text{
+        margin-left: 80px;
+    }
+
+    &__dev{
+        display: flex;
+        align-items: center;
+
+        img{
+            margin-left: 8px;
+        }
+    }
+}
