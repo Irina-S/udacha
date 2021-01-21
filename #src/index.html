@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="stylesheet" href="css/my-grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -51,7 +52,7 @@
                             <li class="benefits-list__item"><div><span>Сотрудничаем с предпринимателями</span class="text_highligted-bold"> к коммерческими структурами из России и Китая</div></li>
                         </ul>
                     </div>
-                    <a href="" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
+                    <a href="#modal-request" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
                 </div>
                 <div class="first-screen__img-block">
                     <img src="img/flags.png" alt="" class="first-screen__img">
@@ -195,7 +196,19 @@
             </div>
         </div>
     </footer>
+    <div class="modal modal-request" id="modal-request">
+        <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
+        <form action="" class="request-form">
+            <h3 class="modal-title">Оставьте заявку</h3>
+            <div class="modal-subtitle">и мы вам перезвоним!</div>
+            <input type="text" class="request-form__input_text" placeholder="Ваше имя">
+            <input type="text" class="request-form__input_text" placeholder="Ваш телефон">
+            <button class="request-form__btn btn">Оставить заявку <img src="img/arrow.svg" alt="стрелка"></button>
+        </form>
+        <div class="modal__text" id="data">Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#" class="text_highligted-bold">политикой конфиденциальности</a></div>
+    </div>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/map.js"></script>
     <script src="js/script.js"></script>
