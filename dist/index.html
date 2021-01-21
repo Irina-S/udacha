@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/my-grid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Удача</title>
 </head>
 <body>
@@ -60,16 +61,16 @@
     </div>
     <section class="exp">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="exp__text-block"></div>
+            <div class="row exp__body">
+                <div class="col-6 col-lg-4 exp__left">
+                    <!-- <div class="exp__text-block"></div> -->
                     <h2 class="section-title">В чем мы разбираемся, наш опыт и преимущество</h2>
                     <div class="exp__desc">
                         Мы предоставляем необходимые инструменты для оптимизации издержек в бизнесе, организации эффективных схем внешнеэкономической деятельности, организации и легализации бизнеса в Китае.
                     </div>
                     <a href="#" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-6 col-lg-8 exp__right">
                 <ul class="exp-list">
                     <li class="exp-list__item">
                         <img class="exp-list__icon" src="img/handshake.svg" alt="">
@@ -85,14 +86,14 @@
                         <img class="exp-list__icon" src="img/wallet.svg" alt="">
                         <div class="exp-list__desc">
                             <div><span class="text_highligted-bold">Доступные цены</span> на услуги</div>
-                            <a href="#" class="link">Скачать прайс-лист <img src="" alt=""></a>
+                            <a href="#" class="link">Скачать прайс-лист <img src="img/rose-arrow.svg" alt=""></a>
                         </div>
                     </li>
                     <li class="exp-list__item">
                         <img class="exp-list__icon" src="img/chat.svg" alt="">
                         <div class="exp-list__desc"> 
                             <div><span class="text_highligted-bold">Бесплатные консультации</span> по вопросам, связанным с предоставляемыми услугами</div>
-                            <a href="#" class="link">Получить консультацию<img src="" alt=""></a>
+                            <a href="#" class="link">Получить консультацию <img src="img/rose-arrow.svg" alt=""></a>
                         </div>
                     </li>
                 </ul>
@@ -164,7 +165,6 @@
     </div>
     <section class="map">
         <div id="map">
-            <img src="img/map.png" alt="" style="width:100%;max-height: 858px;">
         </div>
         <div class="contacts-block">
             <div class="contacts-block__item">
@@ -185,12 +185,19 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__body">
-                <img src="img/logo.svg" alt="логотип" class="logo">
-                <div class="footer__text">© ООО «УДАЧА». Все права защищены.</div>
-                <div class="footer__dev"><span>Разработка сайта — </span><img src="img/forestweb.svg" alt="forestweb"></div>
+                <div class="footer__left-block">
+                    <img src="img/logo.svg" alt="логотип" class="logo">
+                    <div class="footer__text">© ООО «УДАЧА». Все права защищены.</div>
+                </div>
+                <div class="footer__right-block">
+                    <div class="footer__dev"><span>Разработка сайта</span><span> — </span><img src="img/forestweb.svg" alt="forestweb"></div>
+                </div>
             </div>
         </div>
     </footer>
+    <script src="js/jquery.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/map.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

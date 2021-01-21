@@ -1,3 +1,5 @@
+@import "_mixins.scss";
+
 // Цвета макета
 $blue:#2737A7;
 $rose:#FF2535;
@@ -10,10 +12,6 @@ $pale-rose:#FF6A75;
     box-sizing: border-box;
 }
 
-body{
-    overflow-x: hidden;
-}
-
 a{
     text-decoration: none;
     color:inherit;
@@ -23,9 +21,16 @@ a{
     font-weight: 900;;
 }
 
+.logo{
+    @include adaptive-value('width', 240, 150, 3);
+
+    img{
+        width: 100%;
+    }
+}
+
 .btn{
     display: inline-flex;
-    // width:320px;
     justify-content: center;
     align-items: center;
     padding: 24px 67px 22px;
@@ -33,7 +38,8 @@ a{
     color:#fff;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    // font-size: 18px;
+    @include adaptive-value('font-size', 18, 11, 3);
     line-height: 133%;
     border-radius: 60px;
     transition: background-color 0.3s;
@@ -51,7 +57,8 @@ a{
     border-bottom:1px solid $pale-rose;
     color:$rose;
     font-weight: bold;
-    font-size: 16px;
+    // font-size: 16px;
+    @include adaptive-value('font-size', 16, 11, 3);
     line-height: 225%;
     letter-spacing: 0.02em;
     transition: color 0.3s;
@@ -66,7 +73,8 @@ a{
         line-height: 122%;
         letter-spacing: 0.02em;
         font-weight: bold;
-        font-size: 50px;
+        // font-size: 50px;
+        @include adaptive-value('font-size', 50, 27, 3);
         letter-spacing: 0.02em;
         
 }
@@ -80,11 +88,12 @@ a{
     }
 }
 
-// РАЗДЕЛЫ
+// РАЗДЕЛЫ и БЛОКИ
 
 .header{
     position: absolute;
-    top: 84px;
+    // top: 84px;
+    @include adaptive-value('top', 84, 20, 3);
     left: 0;
     width: 100%;
     height: 80px;
@@ -111,14 +120,21 @@ a{
             color:#fff;
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
-            font-size: 14px;
+            // font-size: 14px;
+            @include adaptive-value('font-size', 14, 10, 3);
             line-height: 121%;
             letter-spacing: 0.02em;
-            margin-right: 50px;
+            // margin-right: 50px;
+            @include adaptive-value('margin-right', 50, 10, 3);
             padding-bottom: 12px;
+            transition: color 0.3s;
 
             &:last-child{
                 margin-right: 0;
+            }
+
+            &:hover{
+                color: #919BE3;
             }
 
             &.active{
@@ -133,7 +149,8 @@ a{
         color:#fff;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 20px;
+        // font-size: 20px;
+        @include adaptive-value('font-size', 20, 12, 3);
         line-height: 130%;
         letter-spacing: 0.02em;
 
@@ -156,9 +173,12 @@ a{
 .first-screen{
     // max-height: 855px;
     position: relative;
-    padding-top: 215px;
+    // padding-top: 215px;
+    @include adaptive-value('padding-top', 215, 40, 3);
+    // @include adaptive-value('height', 36, 20, 3);
     background-color: $blue;
-    height: 850px;
+    min-height: 850px;
+    // @include adaptive-value('height', 850, 600, 3);
     background-position: left -5px top 66%, right 126px top 74%;
     background-position: left -5px top 66%, right calc(7%) top;
     background-repeat: no-repeat;
@@ -173,13 +193,12 @@ a{
         content:"";
         background: $blue;
         background: #2737A7;
-        width: 196%;
-        height: 200px;
+        width: 100%;
+        height: 70%;
         position: absolute;
-        top: calc(100% - 150px);
-        left: -50%;
-        /* transform: translateX(0%); */
-        border-radius: 79%/73%;
+        border: radius;
+        border-radius: 203%/32%;
+        top: calc(36% - 1px);
         z-index: -1;
     }
 
@@ -187,16 +206,14 @@ a{
         width: 46%;
     }
 
-
     &__img-block{  
         width: 54%;
     }
 
     &__img{
-        max-width: 40%;
         position: absolute;
         bottom: -81px;
-        margin-left: 20px;
+        margin-left: 13px;
         z-index: 2;
     }
 
@@ -204,7 +221,8 @@ a{
         font-family: 'Montserrat', sans-serif;
         color:#fff;
         font-weight: normal;
-        font-size: 36px;//!!!!!!!!
+        // font-size: 36px;//!!!!!!!!
+        @include adaptive-value('font-size', 36, 20, 3);
         line-height: 139%;
         letter-spacing: 0.02em;
         
@@ -222,13 +240,13 @@ a{
         margin-left: 10px;
 
         .icon-arrow{
-
         }
     } 
 }
 
 .benefits-list{
     padding: 8px 95px 15px 30px;
+    @include adaptive-value('padding-left', 8, 2, 3);
     list-style-image: url('../img/tick.svg');
 
     &__item{
@@ -236,7 +254,8 @@ a{
         padding-left: 10px;
         list-style-position: inside;
         font-family: 'Montserrat', sans-serif;
-        font-size: 17px;
+        // font-size: 17px;
+        @include adaptive-value('font-size', 17, 12, 3);
         line-height: 153%;
         list-style-image: url('../img/tick.svg');
 
@@ -260,12 +279,18 @@ a{
 
 .exp{
     padding-top: 190px;
-    padding-bottom: 121px;
+    
+
+    &__body{
+        border-bottom:1px solid #E8E8E8;
+        padding-bottom: 45px;
+    }
 
     &__desc{
         font-family: 'Montserrat', sans-serif;
         font-weight: 300;
-        font-size: 18px;
+        // font-size: 18px;
+        @include adaptive-value('font-size', 18, 11, 3);
         line-height: 178%;
         letter-spacing: 0.02em;
         color: #202020;
@@ -285,7 +310,8 @@ a{
             align-items: flex-start;
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            font-size: 22px;
+            // font-size: 22px;
+            @include adaptive-value('font-size', 22, 11, 3);
             line-height: 164%;
             letter-spacing: 0.02em;
             color: #202020;
@@ -300,19 +326,20 @@ a{
             margin-left: 115px;
         }
 
-        span{
-            margin-bottom: 10px;
-        }
+        // span{
+        //     margin-bottom: 10px;
+        // }
 
         &__icon{
             position: absolute;
             top:-10px;
+            @include adaptive-value('width', 80, 40, 3);
         }
     }    
 }
 
 .profit{
-    padding-top:21px;
+    padding-top: 96px;
     padding-bottom: 83px;
 
     &-cards{
@@ -358,7 +385,8 @@ a{
             font-family: 'Montserrat', sans-serif;
             font-style: normal;
             font-weight: 300;
-            font-size: 16px;
+            // font-size: 16px;
+            @include adaptive-value('font-size', 16, 13, 3);
             line-height: 162%;
             letter-spacing: 0.02em;
             color: #202020;
@@ -402,7 +430,8 @@ a{
         margin-top: -20px;
         margin-bottom: 44px;
         font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
+        // font-size: 24px;
+        @include adaptive-value('font-size', 24, 15, 3);
         line-height: 125%;
         text-align: center;
         letter-spacing: 0.02em;
@@ -428,12 +457,18 @@ a{
     z-index: 2;
     top: -43px;
 
+    #map{
+        height: 858px;
+    }
+
 }
 
 .contacts-block{
     position: absolute;
     top: 270px;
-    left: 246px;
+    // left: 246px;
+    left:calc((100vw - 1420px) / 2);
+    // @include adaptive-value('left', 246, 50, 3);
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -449,24 +484,28 @@ a{
         display: flex;
         justify-content: flex-start;
         width:100%; 
-        
-        padding-top: 22px;
-        padding-bottom: 24px;
+        padding-top: 23px;
+        padding-bottom: 21px;
         border-bottom: 1px solid #E8E8E8;
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
-        font-size: 16px;
+        // font-size: 16px;
+        @include adaptive-value('font-size', 16, 13, 3);
         line-height: 150%;
         letter-spacing: 0.02em;
         color: #202020;
 
-        &:last-child{
+        &:last-of-type{
             border: none;
         }
 
         .icon-pin, .icon-phone, .icon-mail{
             color:$rose;
             font-size: inherit;
+        }
+
+        .icon-mail{
+            font-size:12px;
         }
     }
 
@@ -476,6 +515,7 @@ a{
 
     &__btn{
         font-size: 14px;
+        // @include adaptive-value('font-size', 14, 10, 3);
         line-height: 143%;
         padding: 12px 57px;
     }
@@ -483,18 +523,28 @@ a{
 
 .footer{
     background-color: #fff;
+    margin-top: -50px;
     &__body{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 50px 0;
+        padding: 57px 0;
         font-family: Montserrat;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
+        // font-size: 14px;
+        @include adaptive-value('font-size', 14, 10, 3);
         line-height: 129%;
         font-feature-settings: 'pnum' on, 'lnum' on;
         color: #202020;
+    }
+
+    &__left-block{
+        flex-basis:50%;
+        flex-grow: 2;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     &__text{

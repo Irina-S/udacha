@@ -3,10 +3,6 @@
           box-sizing: border-box;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -14,6 +10,14 @@ a {
 
 .text_highligted-bold {
   font-weight: 900;
+}
+
+.logo {
+  width: calc(150px + 90 * ((100vw - 320px) / 1600));
+}
+
+.logo img {
+  width: 100%;
 }
 
 .btn {
@@ -31,7 +35,7 @@ a {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 18px;
+  font-size: calc(11px + 7 * ((100vw - 320px) / 1600));
   line-height: 133%;
   border-radius: 60px;
   -webkit-transition: background-color 0.3s;
@@ -51,7 +55,7 @@ a {
   border-bottom: 1px solid #FF6A75;
   color: #FF2535;
   font-weight: bold;
-  font-size: 16px;
+  font-size: calc(11px + 5 * ((100vw - 320px) / 1600));
   line-height: 225%;
   letter-spacing: 0.02em;
   -webkit-transition: color 0.3s;
@@ -69,7 +73,7 @@ a {
   line-height: 122%;
   letter-spacing: 0.02em;
   font-weight: bold;
-  font-size: 50px;
+  font-size: calc(27px + 23 * ((100vw - 320px) / 1600));
   letter-spacing: 0.02em;
 }
 
@@ -83,7 +87,7 @@ a {
 
 .header {
   position: absolute;
-  top: 84px;
+  top: calc(20px + 64 * ((100vw - 320px) / 1600));
   left: 0;
   width: 100%;
   height: 80px;
@@ -122,15 +126,22 @@ a {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
   line-height: 121%;
   letter-spacing: 0.02em;
-  margin-right: 50px;
+  margin-right: calc(10px + 40 * ((100vw - 320px) / 1600));
   padding-bottom: 12px;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .nav-list__item:last-child {
   margin-right: 0;
+}
+
+.nav-list__item:hover {
+  color: #919BE3;
 }
 
 .nav-list__item.active {
@@ -141,7 +152,7 @@ a {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: calc(12px + 8 * ((100vw - 320px) / 1600));
   line-height: 130%;
   letter-spacing: 0.02em;
 }
@@ -162,9 +173,9 @@ a {
 
 .first-screen {
   position: relative;
-  padding-top: 215px;
+  padding-top: calc(40px + 175 * ((100vw - 320px) / 1600));
   background-color: #2737A7;
-  height: 850px;
+  min-height: 850px;
   background-position: left -5px top 66%, right 126px top 74%;
   background-position: left -5px top 66%, right calc(7%) top;
   background-repeat: no-repeat;
@@ -184,13 +195,12 @@ a {
   content: "";
   background: #2737A7;
   background: #2737A7;
-  width: 196%;
-  height: 200px;
+  width: 100%;
+  height: 70%;
   position: absolute;
-  top: calc(100% - 150px);
-  left: -50%;
-  /* transform: translateX(0%); */
-  border-radius: 79%/73%;
+  border: radius;
+  border-radius: 203%/32%;
+  top: calc(36% - 1px);
   z-index: -1;
 }
 
@@ -203,10 +213,9 @@ a {
 }
 
 .first-screen__img {
-  max-width: 40%;
   position: absolute;
   bottom: -81px;
-  margin-left: 20px;
+  margin-left: 13px;
   z-index: 2;
 }
 
@@ -214,7 +223,7 @@ a {
   font-family: 'Montserrat', sans-serif;
   color: #fff;
   font-weight: normal;
-  font-size: 36px;
+  font-size: calc(20px + 16 * ((100vw - 320px) / 1600));
   line-height: 139%;
   letter-spacing: 0.02em;
 }
@@ -236,6 +245,7 @@ a {
 
 .benefits-list {
   padding: 8px 95px 15px 30px;
+  padding-left: calc(2px + 6 * ((100vw - 320px) / 1600));
   list-style-image: url("../img/tick.svg");
 }
 
@@ -244,7 +254,7 @@ a {
   padding-left: 10px;
   list-style-position: inside;
   font-family: 'Montserrat', sans-serif;
-  font-size: 17px;
+  font-size: calc(12px + 5 * ((100vw - 320px) / 1600));
   line-height: 153%;
   list-style-image: url("../img/tick.svg");
 }
@@ -270,13 +280,17 @@ a {
 
 .exp {
   padding-top: 190px;
-  padding-bottom: 121px;
+}
+
+.exp__body {
+  border-bottom: 1px solid #E8E8E8;
+  padding-bottom: 45px;
 }
 
 .exp__desc {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: calc(11px + 7 * ((100vw - 320px) / 1600));
   line-height: 178%;
   letter-spacing: 0.02em;
   color: #202020;
@@ -301,7 +315,7 @@ a {
           align-items: flex-start;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 22px;
+  font-size: calc(11px + 11 * ((100vw - 320px) / 1600));
   line-height: 164%;
   letter-spacing: 0.02em;
   color: #202020;
@@ -323,17 +337,14 @@ a {
   margin-left: 115px;
 }
 
-.exp-list span {
-  margin-bottom: 10px;
-}
-
 .exp-list__icon {
   position: absolute;
   top: -10px;
+  width: calc(40px + 40 * ((100vw - 320px) / 1600));
 }
 
 .profit {
-  padding-top: 21px;
+  padding-top: 96px;
   padding-bottom: 83px;
 }
 
@@ -399,7 +410,7 @@ a {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: calc(13px + 3 * ((100vw - 320px) / 1600));
   line-height: 162%;
   letter-spacing: 0.02em;
   color: #202020;
@@ -447,7 +458,7 @@ a {
   margin-top: -20px;
   margin-bottom: 44px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: calc(15px + 9 * ((100vw - 320px) / 1600));
   line-height: 125%;
   text-align: center;
   letter-spacing: 0.02em;
@@ -473,10 +484,14 @@ a {
   top: -43px;
 }
 
+.map #map {
+  height: 858px;
+}
+
 .contacts-block {
   position: absolute;
   top: 270px;
-  left: 246px;
+  left: calc((100vw - 1420px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,18 +522,18 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
-  padding-top: 22px;
-  padding-bottom: 24px;
+  padding-top: 23px;
+  padding-bottom: 21px;
   border-bottom: 1px solid #E8E8E8;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 16px;
+  font-size: calc(13px + 3 * ((100vw - 320px) / 1600));
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #202020;
 }
 
-.contacts-block__item:last-child {
+.contacts-block__item:last-of-type {
   border: none;
 }
 
@@ -527,6 +542,10 @@ a {
 .contacts-block__item .icon-mail {
   color: #FF2535;
   font-size: inherit;
+}
+
+.contacts-block__item .icon-mail {
+  font-size: 12px;
 }
 
 .contacts-block__value {
@@ -541,6 +560,7 @@ a {
 
 .footer {
   background-color: #fff;
+  margin-top: -50px;
 }
 
 .footer__body {
@@ -553,15 +573,32 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 50px 0;
+  padding: 57px 0;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
   line-height: 129%;
   -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
           font-feature-settings: 'pnum' on, 'lnum' on;
   color: #202020;
+}
+
+.footer__left-block {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__text {

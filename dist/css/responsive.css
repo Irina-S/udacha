@@ -1,0 +1,305 @@
+@media (max-width: 1499px) {
+  .btn {
+    padding: 24px 32px 22px;
+  }
+
+  .first-screen__img {
+    width: 620px;
+    bottom: -75px;
+    margin-left: -10px;
+  }
+
+  .exp {
+    padding-top: 135px;
+  }
+
+  .exp-list {
+    margin-left: 70px;
+  }
+
+  .exp-list__item {
+    margin-left: 30px;
+  }
+
+  .questions__body {
+    padding: 60px 34% 90px;
+  }
+
+  .questions__cont {
+    height: 420px;
+  }
+
+  .map #map {
+    height: 600px;
+  }
+
+  .contacts-block {
+    top: 150px;
+    left: calc((100vw - 1110px) / 2);
+  }
+}
+
+@media (max-width: 1250px) {
+  .first-screen {
+    min-height: 740px;
+  }
+
+  .first-screen__img {
+    bottom: -68px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .first-screen__img {
+    width: 530px;
+    bottom: -66px;
+  }
+
+  .exp-list {
+    padding-left: 0;
+  }
+
+  .exp-list__desc {
+    margin-left: 100px;
+  }
+
+  .exp-list__item {
+    margin-left: 70px;
+  }
+
+  .exp-list__icon {
+    top: 0;
+  }
+
+  .profit-card {
+    margin-bottom: 50px;
+  }
+
+  .questions__body {
+    padding: 30px 34% 70px;
+  }
+
+  .questions__cont {
+    height: 365px;
+  }
+
+  .contacts-block {
+    left: calc((100vw - 930px) / 2);
+  }
+}
+
+@media (max-width: 991px) {
+  .btn {
+    padding: 18px 25px 18px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .first-screen {
+    min-height: 600px;
+  }
+
+  .first-screen__text-block {
+    width: 55%;
+  }
+
+  .first-screen__title {
+    position: relative;
+    width: 130%;
+  }
+
+  .first-screen__img-block {
+    width: 45%;
+  }
+
+  .first-screen__img {
+    width: 390px;
+    bottom: -50px;
+    margin-left: -57px;
+  }
+
+  .benefits-list {
+    padding-left: 0;
+    padding-bottom: 10px;
+  }
+
+  .exp-list {
+    margin-left: -15px;
+  }
+
+  .exp-list__item {
+    margin-left: 28px;
+    margin-bottom: 30px;
+  }
+
+  .exp-list__desc {
+    margin-left: 80px;
+  }
+
+  .profit {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  .profit-card {
+    margin-bottom: 35px;
+    padding-top: 38px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 38px;
+  }
+
+  .profit-card__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .questions__body {
+    padding: 30px 20% 70px;
+  }
+
+  .questions__text {
+    margin-bottom: 25px;
+  }
+
+  .questions__cont {
+    height: 250px;
+  }
+
+  .contacts-block {
+    left: calc((100vw - 690px) / 2 + 50px);
+    padding: 20px 36px 31px;
+    width: 295px;
+    height: 325px;
+  }
+
+  .contacts-block__item {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .contacts-block__item:last-of-type {
+    margin-bottom: 13px;
+  }
+
+  .footer {
+    margin-left: 20px;
+  }
+
+  .footer__body {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn__arrow {
+    width: 15px;
+  }
+
+  .first-screen {
+    min-height: 490px;
+  }
+
+  .first-screen__text-block {
+    width: 75%;
+  }
+
+  .first-screen__title {
+    position: relative;
+    width: 130%;
+  }
+
+  .first-screen__img-block {
+    width: 15%;
+  }
+
+  .first-screen__img {
+    width: 260px;
+    bottom: -39px;
+    margin-left: -127px;
+  }
+
+  .first-screen__benefits {
+    position: relative;
+    width: 105%;
+  }
+
+  .benefits-list__item {
+    padding-left: 0;
+  }
+
+  .exp {
+    padding-top: 70px;
+  }
+
+  .exp-list {
+    border: none;
+  }
+
+  .exp-list__desc {
+    margin-left: 60px;
+  }
+
+  .exp__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .exp__left,
+  .exp__right {
+    max-width: 100%;
+  }
+
+  .exp__desc {
+    padding-bottom: 20px;
+  }
+
+  .profit {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  .profit-card {
+    -ms-flex-preferred-size: 99%;
+        flex-basis: 99%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .profit-card__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .questions__body {
+    padding: 15px 23% 60px;
+  }
+
+  .questions__cont {
+    height: 180px;
+  }
+
+  .contacts-block {
+    left: calc((100vw - 510px) / 2);
+  }
+
+  .footer__left {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .first-screen {
+    min-height: 450px;
+  }
+
+  .first-screen__img {
+    width: 221px;
+    bottom: -33px;
+    margin-left: -118px;
+  }
+}

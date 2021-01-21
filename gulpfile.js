@@ -103,7 +103,8 @@ function css(){
 function css_libs(){
     return src([
         'node_modules/normalize.css/normalize.css',
-        'node_modules/bootstrap/dist/css/bootstrap-grid.css'
+        'node_modules/bootstrap/dist/css/bootstrap-grid.css', 
+        'node_modules/fancybox/dist/css/jquery.fancybox.css'
         // 'node_modules/slick-carousel/slick/slick.css',
         // 'node_modules/animate.css/animate.css'
         // 'node_modules/wow.js/css/libs/animate.css'
@@ -132,6 +133,7 @@ function js(){
 function js_libs(){
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/fancybox/dist/js/jquery.fancybox.js'
         // 'node_modules/slick-carousel/slick/slick.js',
         // 'node_modules/wow.js/dist/wow.js'
       ])
