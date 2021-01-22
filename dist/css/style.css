@@ -3,13 +3,36 @@
           box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.507);
+  z-index: 49;
+}
+
+.blocked {
+  overflow: hidden;
+}
+
 .text_highligted-bold {
   font-weight: 900;
+}
+
+.text_align-center {
+  text-align: center;
 }
 
 .logo {
@@ -75,7 +98,7 @@ a {
   line-height: 122%;
   letter-spacing: 0.02em;
   font-weight: bold;
-  font-size: calc(27px + 23 * ((100vw - 320px) / 1600));
+  font-size: calc(26px + 24 * ((100vw - 320px) / 1600));
   letter-spacing: 0.02em;
 }
 
@@ -128,7 +151,7 @@ a {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
+  font-size: calc(11px + 3 * ((100vw - 320px) / 1600));
   line-height: 121%;
   letter-spacing: 0.02em;
   margin-right: calc(10px + 40 * ((100vw - 320px) / 1600));
@@ -175,7 +198,7 @@ a {
 
 .first-screen {
   position: relative;
-  padding-top: calc(40px + 175 * ((100vw - 320px) / 1600));
+  padding-top: calc(60px + 155 * ((100vw - 320px) / 1600));
   background-color: #2737A7;
   min-height: 850px;
   background-position: left -5px top 66%, right 126px top 74%;
@@ -292,7 +315,7 @@ a {
 .exp__desc {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: calc(11px + 7 * ((100vw - 320px) / 1600));
+  font-size: calc(12px + 6 * ((100vw - 320px) / 1600));
   line-height: 178%;
   letter-spacing: 0.02em;
   color: #202020;
@@ -317,7 +340,7 @@ a {
           align-items: flex-start;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: calc(11px + 11 * ((100vw - 320px) / 1600));
+  font-size: calc(12px + 10 * ((100vw - 320px) / 1600));
   line-height: 164%;
   letter-spacing: 0.02em;
   color: #202020;
@@ -342,7 +365,7 @@ a {
 .exp-list__icon {
   position: absolute;
   top: -10px;
-  width: calc(40px + 40 * ((100vw - 320px) / 1600));
+  width: calc(35px + 45 * ((100vw - 320px) / 1600));
 }
 
 .profit {
@@ -492,7 +515,8 @@ a {
 
 .contacts-block {
   position: absolute;
-  top: 270px;
+  bottom: 374px;
+  z-index: 10;
   left: calc((100vw - 1420px) / 2);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,13 +645,51 @@ a {
 }
 
 .modal {
-  position: relative;
+  position: fixed;
   display: none;
   width: 460px;
-  height: 540px;
+  height: auto;
   background: #FFFFFF;
   border-radius: 30px;
   padding: 61px 66px 59px;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 51;
+  padding-bottom: 59px;
+}
+
+.modal-success {
+  background-color: #2BAD4C;
+  padding-bottom: 48px;
+}
+
+.modal-success__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
+
+.modal-success .modal-title,
+.modal-success .modal-subtitle {
+  color: #fff;
+}
+
+.modal-success img {
+  margin-top: 93px;
+  margin-bottom: 25px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .modal__cross {
@@ -687,7 +749,8 @@ a {
           align-items: stretch;
 }
 
-.request-form__input_text {
+.request-form__input_text,
+.request-form__textarea {
   outline: none;
   background: #F8F8F8;
   border: 1px solid #E8E8E8;
@@ -706,13 +769,16 @@ a {
   line-height: 122%;
   letter-spacing: 0.02em;
   color: #202020;
+  resize: none;
 }
 
-.request-form__input_text:last-of-type {
+.request-form__input_text:last-of-type,
+.request-form__textarea:last-of-type {
   margin-bottom: 30px;
 }
 
-.request-form__input_text:hover {
+.request-form__input_text:hover,
+.request-form__textarea:hover {
   background: #FFFFFF;
   border: 1px solid #E8E8E8;
 }

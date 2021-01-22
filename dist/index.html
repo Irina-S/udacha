@@ -15,11 +15,12 @@
     <title>Удача</title>
 </head>
 <body>
+    <div class="overlay"></div>
     <header class="header">
         <div class="container">
             <div class="header__body">
                 <div class="logo">
-                    <img src="img/logo.svg" alt="логотип">
+                    <a href="#"><img src="img/logo.svg" alt="логотип"></a>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
@@ -31,10 +32,9 @@
                 </nav>
                 <div class="contacts">
                     <div class="contacts__phone">
-                        <i class="icon-phone"></i>
-                        <a href="#" class="contacts__phone-link">+7 (914) 135-19-43</a>
+                        <a href="tel:+79141351943" class="contacts__phone-link"><i class="icon-phone"></i>+7 (914) 135-19-43</a>
                     </div>
-                    <div class="contacts__callback"><a href="#" class="link">Перезвоните мне</a></div>
+                    <div class="contacts__callback"><a href="#modal-callback" class="link">Перезвоните мне</a></div>
                 </div>
             </div>
             
@@ -69,13 +69,15 @@
                     <div class="exp__desc">
                         Мы предоставляем необходимые инструменты для оптимизации издержек в бизнесе, организации эффективных схем внешнеэкономической деятельности, организации и легализации бизнеса в Китае.
                     </div>
-                    <a href="#" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
+                    <a href="#modal-request" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
                 </div>
                 <div class="col-6 col-lg-8 exp__right">
                 <ul class="exp-list">
                     <li class="exp-list__item">
                         <img class="exp-list__icon" src="img/handshake.svg" alt="">
-                        <div><div class="exp-list__desc"><span class="text_highligted-bold">Многолетний опыт работы</span> и обслуживании с иностранными компаниями</div></div>
+                        <div class="exp-list__desc">
+                            <div><span class="text_highligted-bold">Многолетний опыт работы</span> и обслуживании с иностранными компаниями</div>
+                        </div>
                     </li>
                     <li class="exp-list__item">
                         <img class="exp-list__icon" src="img/case.svg" alt="">
@@ -94,7 +96,7 @@
                         <img class="exp-list__icon" src="img/chat.svg" alt="">
                         <div class="exp-list__desc"> 
                             <div><span class="text_highligted-bold">Бесплатные консультации</span> по вопросам, связанным с предоставляемыми услугами</div>
-                            <a href="#" class="link">Получить консультацию <img src="img/rose-arrow.svg" alt=""></a>
+                            <a href="#modal-request" class="link">Получить консультацию <img src="img/rose-arrow.svg" alt=""></a>
                         </div>
                     </li>
                 </ul>
@@ -105,7 +107,7 @@
     <div class="wrapper">
         <section class="profit">
             <div class="container">
-                <div class="row justify-content-center"><h2 class="section-title">Наши услуги будут полезны:</h2></div>
+                <div class="row justify-content-center"><h2 class="section-title text_align-center">Наши услуги будут полезны:</h2></div>
                 <div class="row">
                     <div class="profit-cards">
                         <div class="profit-card">
@@ -157,7 +159,7 @@
                 <div class="questions__body">
                     <h2 class="section-title_white">Есть вопросы?</h2>
                     <div class="questions__text">Готовы перезвонить и подсказать по всем вопросам!</div>
-                    <a href="#" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
+                    <a href="#modal-request" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
                     <img src="img/container-left.png" alt="" class="questions__cont questions__cont_left">
                     <img src="img/container-right.png" alt="" class="questions__cont questions__cont_right">
                 </div>
@@ -167,36 +169,36 @@
     <section class="map">
         <div id="map">
         </div>
-        <div class="contacts-block">
-            <div class="contacts-block__item">
-                <i class="icon-pin"></i>
-                <div class="contacts-block__value">г. Чита, ул. Бутина д. 44, пом. 2</div>
-            </div>
-            <div class="contacts-block__item">
-                <i class="icon-phone"></i>
-                <div class="contacts-block__value">+7 (914) 135-19-43</div>
-            </div>
-            <div class="contacts-block__item">
-                <i class="icon-mail"></i>
-                <div class="contacts-block__value">se-lob@yandex.ru</div>
-            </div>
-            <a href="#" class="btn contacts-block__btn">Обратная связь</a>
-        </div>
     </section>
+    <div class="contacts-block">
+        <div class="contacts-block__item">
+            <i class="icon-pin"></i>
+            <div class="contacts-block__value">г. Чита, ул. Бутина д. 44, пом. 2</div>
+        </div>
+        <div class="contacts-block__item">
+            <i class="icon-phone"></i>
+            <div class="contacts-block__value">+7 (914) 135-19-43</div>
+        </div>
+        <div class="contacts-block__item">
+            <i class="icon-mail"></i>
+            <div class="contacts-block__value">se-lob@yandex.ru</div>
+        </div>
+        <a href="#modal-callback" class="btn contacts-block__btn">Обратная связь</a>
+    </div>
     <footer class="footer">
         <div class="container">
             <div class="footer__body">
                 <div class="footer__left-block">
-                    <img src="img/logo.svg" alt="логотип" class="logo">
-                    <div class="footer__text">© ООО «УДАЧА». Все права защищены.</div>
+                    <a href="#"><img src="img/logo.svg" alt="логотип" class="logo"></a>
+                    <div class="footer__text"><span>© ООО «УДАЧА». </span><span>Все права защищены.</span></div>
                 </div>
                 <div class="footer__right-block">
-                    <div class="footer__dev"><span>Разработка сайта</span><span> — </span><img src="img/forestweb.svg" alt="forestweb"></div>
+                    <div class="footer__dev"><span>Разработка сайта&nbsp;</span><span>&nbsp;— </span><img src="img/forestweb.svg" alt="forestweb"></div>
                 </div>
             </div>
         </div>
     </footer>
-    <div class="modal modal-request" id="modal-request">
+    <div class="modal modal-callback" id="modal-callback">
         <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
         <form action="" class="request-form">
             <h3 class="modal-title">Оставьте заявку</h3>
@@ -206,6 +208,27 @@
             <button class="request-form__btn btn">Оставить заявку <img src="img/arrow.svg" alt="стрелка"></button>
         </form>
         <div class="modal__text" id="data">Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#" class="text_highligted-bold">политикой конфиденциальности</a></div>
+    </div>
+    <div class="modal modal-request" id="modal-request">
+        <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
+        <form action="" class="request-form">
+            <h3 class="modal-title">Оставьте заявку</h3>
+            <div class="modal-subtitle">и мы свяжемся с вами!</div>
+            <input type="text" class="request-form__input_text" placeholder="Ваше имя">
+            <input type="text" class="request-form__input_text" placeholder="Ваш телефон">
+            <input type="text" class="request-form__input_text" placeholder="Ваш email">
+            <textarea name="" id="" cols="30" rows="8" class="request-form__input_text request-form__textarea" placeholder="Комментарий"></textarea>
+            <button class="request-form__btn btn">Оставить заявку <img src="img/arrow.svg" alt="стрелка"></button>
+        </form>
+        <div class="modal__text" id="data">Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#" class="text_highligted-bold">политикой конфиденциальности</a></div>
+    </div>
+    <div class="modal modal-success">
+        <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
+        <div class="modal-success__inner">
+            <img src="img/modal-success.svg" alt="">
+            <div class="modal-title">Заявка отправлена</div>
+            <div class="modal-subtitle">Наш специалист свяжется с Вами в ближайшее время.</div>
+        </div>  
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.fancybox.js"></script>

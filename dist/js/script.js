@@ -1,10 +1,17 @@
 $(document).ready(function(){
-    $('a[href="#modal-request"]').fancybox({
-        'overlayShow'   :   true
+    // Открытие модалок
+    $('a[href="#modal-callback"], a[href="#modal-request"]').on('click', function(){
+        let id = $(this).attr('href');
+        $('body').addClass('blocked');
+        $('.overlay').fadeIn(500);
+        $(id).fadeIn(500);
     });
 
-    $('.modal-cross').on('click', function(e){
-        e.preventDefault();
-        $.fancybox.close();
+    // Закрытие всех модалок
+    $('.modal__cross, .overlay').on('click', function(){
+        $('.modal').fadeOut(500);
+        $('.overlay').fadeOut(500);
+        $('body').removeClass('blocked');
     });
+
 })

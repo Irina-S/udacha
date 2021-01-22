@@ -88,13 +88,13 @@ function css(){
         //         noWebpClass: '.no-webp'
         //     })
         // )
-        .pipe(dest(path.build.css))
-        .pipe(clean_css())
-        .pipe(
-            rename({
-                extname:".min.css"
-            })
-        )
+        // .pipe(dest(path.build.css))
+        // .pipe(clean_css())
+        // .pipe(
+        //     rename({
+        //         extname:".min.css"
+        //     })
+        // )
         .pipe(dest(path.build.css))
         .pipe(browsersync.stream());
 }
@@ -117,9 +117,9 @@ function js(){
     return src(path.src.js)
         // .pipe(fileinclude())
         .pipe(dest(path.build.js))
-        .pipe(
-            uglify()
-        )
+        // .pipe(
+        //     uglify()
+        // )
         .pipe(
             rename({
                 extname:".min.js"
