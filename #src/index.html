@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/my-grid.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -198,31 +199,31 @@
             </div>
         </div>
     </footer>
-    <div class="modal modal-callback" id="modal-callback">
+    <div class="modal modal-callback mfp-hide" id="modal-callback">
         <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
         <form action="" class="request-form">
             <h3 class="modal-title">Оставьте заявку</h3>
             <div class="modal-subtitle">и мы вам перезвоним!</div>
-            <input type="text" class="request-form__input_text" placeholder="Ваше имя">
-            <input type="text" class="request-form__input_text" placeholder="Ваш телефон">
-            <button class="request-form__btn btn">Оставить заявку <img src="img/arrow.svg" alt="стрелка"></button>
+            <input type="text" class="request-form__input_text required" placeholder="Ваше имя">
+            <input type="text" class="request-form__input_text required required-phone" id="phone-callback" placeholder="Ваш телефон">
+            <button class="request-form__btn btn">Оставить заявку <img src="img/arrow.svg" alt="стрелка" class="btn__arrow"></button>
         </form>
         <div class="modal__text" id="data">Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#" class="text_highligted-bold">политикой конфиденциальности</a></div>
     </div>
-    <div class="modal modal-request" id="modal-request">
+    <div class="modal modal-request mfp-hide" id="modal-request">
         <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
         <form action="" class="request-form">
             <h3 class="modal-title">Оставьте заявку</h3>
             <div class="modal-subtitle">и мы свяжемся с вами!</div>
-            <input type="text" class="request-form__input_text" placeholder="Ваше имя">
-            <input type="text" class="request-form__input_text" placeholder="Ваш телефон">
-            <input type="text" class="request-form__input_text" placeholder="Ваш email">
+            <input type="text" class="request-form__input_text required" placeholder="Ваше имя">
+            <input type="text" class="request-form__input_text required required-phone" id="phone-request" placeholder="Ваш телефон">
+            <input type="text" class="request-form__input_text required required-email" placeholder="Ваш email">
             <textarea name="" id="" cols="30" rows="8" class="request-form__input_text request-form__textarea" placeholder="Комментарий"></textarea>
-            <button class="request-form__btn btn">Оставить заявку <img src="img/arrow.svg" alt="стрелка"></button>
+            <button class="request-form__btn btn">Оставить заявку <img src="img/arrow.svg" alt="стрелка"  class="btn__arrow"></button>
         </form>
         <div class="modal__text" id="data">Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#" class="text_highligted-bold">политикой конфиденциальности</a></div>
     </div>
-    <div class="modal modal-success">
+    <div class="modal modal-success mfp-hide">
         <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
         <div class="modal-success__inner">
             <img src="img/modal-success.svg" alt="">
@@ -232,6 +233,9 @@
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/jquery.fancybox.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/sticky.min.js"></script>
+    <script src="js/cleave.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/map.js"></script>
     <script src="js/script.js"></script>
