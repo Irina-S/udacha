@@ -1,3 +1,6 @@
+$blue:#2737A7;
+$rose:#FF2535;
+
 @media (max-width:1900px){
     .questions{
         &__cont{
@@ -128,12 +131,125 @@
         padding: 18px 25px 18px;
     }
 
+    .header{
+        top:30px;
+    }
+
     .nav{
         display:none;
+        // display:none;
+    }
+
+    .mobile-nav{
+        display: block;
+        z-index:11;
+        position:fixed;
+        width: 100%;
+        height:calc(100vh);
+        padding-top:110px;
+        // background-color: rgb(155, 43, 43);
+        background-color: $blue;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease-out;
+
+        &.nav_opened{
+            // transform:translateX(0);
+            transform: translateY(0);
+
+            .active{
+                border-bottom: none;
+                color:$rose;
+            }
+        }
+
+        .nav-list{
+            flex-direction: column;
+            max-width: 720px;
+            margin: 0 auto;
+            padding:0 15px;
+
+            &__item{
+                padding:15px 0;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .mobile-toggle{
+        display: block;
+        position:relative;
+        width:25px;
+        height:20px;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        cursor: pointer;
+
+        span{
+            position: absolute;
+            width:100%;
+            height:2px;
+            left:0;
+            background-color: #fff;
+            transition:all 0.3s;
+
+            &:first-child{
+                top: 0;
+            }
+
+            &:nth-child(2){
+                top:9px;
+            }
+
+            &:nth-child(3){
+                bottom:0;
+            }
+        }
+
+        &.mobile-toggle_open{
+            span:first-child{
+                transform:rotate(45deg);
+                top:9px;
+                // transform-origin: 0 0;
+                
+            }
+
+            span:nth-child(2){
+                display: none;
+            }
+
+            span:nth-child(3){
+                transform: rotate(-45deg);
+                bottom:9px;
+                // transform-origin: 0 100%;
+                // transform-origin: left bottom;
+            }
+        }
+    }
+
+    .contacts{
+        margin-right: -45%;
+
+        &__phone{
+            margin-top: 6px;
+
+            &-link{
+                font-size: 0;
+
+                i{
+                    font-size: 26px;
+                }
+            }
+        }
+        &__callback{
+            display: none;
+        }
+
     }
 
     .first-screen{
         min-height: 600px;
+        padding-top: 115px;
 
         &__text-block{
             width: 55%;
@@ -208,11 +324,11 @@
     }
 
     .contacts-block{
-        left: calc((100vw - 690px) / 2 + 50px);
+        // left: calc((100vw - 690px) / 2 + 50px);
+        left: calc((100vw - 690px) / 2 + 20px);
         padding: 20px 36px 31px;    
         width: 295px;
         height: 325px;
-        // justify-content: flex-start;
 
         &__item{
             padding-top: 18px;
@@ -246,6 +362,12 @@
 
     .link img{
         width:15px;
+    }
+
+    .mobile-nav{
+        .nav-list{
+            max-width:540px;
+        }
     }
 
     .first-screen{
@@ -384,10 +506,20 @@
 }
 
 @media (max-width:575px){
+    .header{
+        top: 10px;
+    }
+
+    .mobile-nav{
+        .nav-list{
+            max-width: 100%;
+        }
+    }
     .section-title{
         text-align: center;
     }
     .first-screen{
+        padding-top: 86px;
         &__img{
             width: 210px;
             bottom: -34px;
@@ -463,25 +595,7 @@
 }
 
 @media (max-width:500px){
-    .contacts{
-        &__phone{
-            &-link{
-                font-size: 0;
-
-                i{
-                    font-size: 20px;
-                }
-
-                
-            }
-
-            
-        }
-        &__callback{
-            display: none;
-        }
-
-    }
+    
     .first-screen{
         min-height: 520px;
 
@@ -561,20 +675,26 @@
     }
 }
 
-@media (max-width:420px){
+@media (max-width:435px){
     .first-screen{
         // min-height: 530px;
+        min-height: 540px;
 
         &__img{
             width: 85px;
             bottom: -33.5px;
         }
     }
+
+    .contacts {
+        margin-right: -20%;
+    }
 }
 
-@media (max-width:350px){
-    .first-screen {
-        min-height: 550px;
+@media (max-width:360px){
+    .first-screen{
+        // min-height: 550px;
+        min-height: 570px;
 
         &__img{
             width: 70px;

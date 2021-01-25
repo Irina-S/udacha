@@ -117,15 +117,15 @@ function css_libs(){
 function js(){
     return src(path.src.js)
         // .pipe(fileinclude())
-        .pipe(dest(path.build.js))
+        // .pipe(dest(path.build.js))
         // .pipe(
         //     uglify()
         // )
-        .pipe(
-            rename({
-                extname:".min.js"
-            })
-        )
+        // .pipe(
+        //     rename({
+        //         extname:".min.js"
+        //     })
+        // )
         .pipe(dest(path.build.js))
         .pipe(browsersync.stream());
 }
@@ -133,8 +133,7 @@ function js(){
 // Сюда вписвывается пути к используемым js-библиотекам
 function js_libs(){
     return src([
-        'node_modules/jquery/dist/jquery.js',
-        'node_modules/fancybox/dist/js/jquery.fancybox.js',
+        'node_modules/jquery/dist/jquery.min.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
         'node_modules/sticky-js/dist/sticky.min.js'
         // 'node_modules/slick-carousel/slick/slick.js',

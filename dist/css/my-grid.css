@@ -4,3 +4,10 @@
     margin: 0 auto 0;
   }
 }
+
+@media (min-width: 2500px) {
+  .container {
+    max-width: 65vw;
+    margin: 0 auto 0;
+  }
+}
