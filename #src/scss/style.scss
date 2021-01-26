@@ -69,7 +69,7 @@ a{
     border-radius: 60px;
     transition: background-color 0.3s;
 
-    &:hover{
+    &:hover, &:active{
         background-color: $pale-rose;
         cursor: pointer;
     }
@@ -404,6 +404,18 @@ a{
             @include adaptive-value('width', 90, 35, 3);
         }
     }    
+}
+
+.desc-list{
+    padding:0;
+    margin:0;
+
+    &__item{
+        list-style-image: url('../img/tick.svg');
+        margin-bottom: 10px;
+        padding-left: 20px;
+        list-style-position: inside;
+    }
 }
 
 .profit{

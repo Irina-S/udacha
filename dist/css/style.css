@@ -68,7 +68,8 @@ a {
   transition: background-color 0.3s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active {
   background-color: #FF6A75;
   cursor: pointer;
 }
@@ -393,6 +394,18 @@ a {
   position: absolute;
   top: -10px;
   width: calc(35px + 55 * ((100vw - 320px) / 1600));
+}
+
+.desc-list {
+  padding: 0;
+  margin: 0;
+}
+
+.desc-list__item {
+  list-style-image: url("../img/tick.svg");
+  margin-bottom: 10px;
+  padding-left: 20px;
+  list-style-position: inside;
 }
 
 .profit {

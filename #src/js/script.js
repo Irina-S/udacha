@@ -16,7 +16,8 @@ $(document).ready(function(){
     // ОТКРЫТИЕ МОДАЛОК
     $('a[href="#modal-callback"], a[href="#modal-request"]').magnificPopup({
         type:'inline',
-        showCloseBtn:false
+        showCloseBtn:false,
+        mainClass: 'mfp-fade'
       });
 
     // ЗАКРЫТИЕ ОТКРЫТОЙ МОДАЛКИ
