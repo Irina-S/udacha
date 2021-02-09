@@ -1,17 +1,21 @@
 $(document).ready(function(){
 
     // ПОКАЗ МОДАЛКИ В СЛУЧАЕ УСПЕШНОЙ ОТПРАВКИ ФОРМЫ
-    // if (document.cookie.split(';').indexOf('isFormSent=1')!=-1){
-    //     alert('form');
-    // }
-    // $('.modal-success').magnificPopup('open');
-    // console.dir(document.cookie.split('; '));
+    if (document.cookie.split(';').indexOf('isFormSent=1')!=-1){
+        document.cookie = "isFormSent=0";
+        $.magnificPopup.open({
+            items: {
+              src: '#modal-success'
+            }
+          });
+    }
+
+    
 
     // ЛИПКАЯ ШАПКА
-    let sticky = new Sticky('.header');
-
-    // ПЛАВНЫЙ СКРОЛЛ К ЯКОРЮ
-    // $.scrollSpeed(500, 800, 'easeOutCubic');
+    let sticky = new Sticky('.header', {
+        stickyClass:'header_fixed'
+    });
 
     // ОТКРЫТИЕ МОДАЛОК
     $('a[href="#modal-callback"], a[href="#modal-request"]').magnificPopup({
@@ -55,7 +59,6 @@ $(document).ready(function(){
                 errorCount++;
             }  
         });
-        console.log(errorCount);
         if (errorCount>0)
             event.preventDefault()
         else
@@ -101,7 +104,8 @@ $(document).ready(function(){
                         prefix: '+7',
                         delimiters: [" (", ")", " ", "-", "-"],
                         blocks: [2, 3, 0, 3, 2, 2],
-                        uppercase: true
+                        uppercase: true,
+                        noImmediatePrefix:true
                     });
                 }
                 else if ($this.closest('form').attr('id')==('request-form')){
@@ -109,7 +113,8 @@ $(document).ready(function(){
                         prefix: '+7',
                         delimiters: [" (", ")", " ", "-", "-"],
                         blocks: [2, 3, 0, 3, 2, 2],
-                        uppercase: true
+                        uppercase: true,
+                        noImmediatePrefix:true
                     }); 
                 }
             } catch(e){};
@@ -173,6 +178,21 @@ $(document).ready(function(){
         e.preventDefault();
         setNav();
         return false;
+    });
+
+    $('.lang-block').on('click', function(){
+        $(this).find('.lang-list').toggleClass('opened');
+        $(this).find('.lang__arrow').toggleClass('rotated');
+    })
+
+    $('#main-slider').slick({
+        slidesToShow:1,
+        slidesToScroll:1,
+        nextArrow:'<div class="slick-arrow slick-next"><img src="img/arrow-left.svg" alt=""></div>',
+        prevArrow:'<div class="slick-arrow slick-prev"><img src="img/arrow-right.svg" alt=""></div>',
+        appendArrows:$('.main-slider__nav'),
+        autoplay:true,
+        autoplaySpeed:3000
     });
 
 })

@@ -13,7 +13,7 @@ let path = {
         html: [source_folder+"/*.html", "!"+source_folder+"/_*.html"],
         css:source_folder+"/scss/*.scss",
         js:source_folder+"/js/*.js",
-        img:source_folder+"/img/**/*.+(png|jpg|gif|ico|svg|webp)",
+        img:source_folder+"/img/**/*.+(png|jpg|jpeg|gif|ico|svg|webp)",
         fonts:source_folder+"/fonts/*.ttf",
         fonts_icons:source_folder+"/fonts/icons/*.*"
     },
@@ -22,7 +22,7 @@ let path = {
         html: source_folder+"/**/*.html",
         css:source_folder+"/scss/**/*.scss",
         js:source_folder+"/js/**/*.js",
-        img:source_folder+"/img/**/*.+(png|jpg|gif|ico|svg|webp)"
+        img:source_folder+"/img/**/*.+(png|jpg|jpeg|gif|ico|svg|webp)"
     },
     //То чо бдет удалятся каждый раз, когда будет запскатся gulp
     clean:"./"+project_folder+"/"
@@ -105,8 +105,9 @@ function css_libs(){
         'node_modules/normalize.css/normalize.css',
         'node_modules/bootstrap/dist/css/bootstrap-grid.css', 
         'node_modules/fancybox/dist/css/jquery.fancybox.css',
-        'node_modules/magnific-popup/dist/magnific-popup.css'
-        // 'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/magnific-popup/dist/magnific-popup.css',
+        'node_modules/jquery-nice-select/css/nice-select.css',
+        'node_modules/slick-carousel/slick/slick.css'
         // 'node_modules/animate.css/animate.css'
         // 'node_modules/wow.js/css/libs/animate.css'
     ])
@@ -135,8 +136,9 @@ function js_libs(){
     return src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
-        'node_modules/sticky-js/dist/sticky.min.js'
-        // 'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/sticky-js/dist/sticky.min.js',
+        'node_modules/jquery-nice-select/js/jquery.nice-select.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js'
         // 'node_modules/wow.js/dist/wow.js'
       ])
         // .pipe(uglify())
@@ -158,7 +160,7 @@ function images(){
                 progressive:true,
                 svgoPlugins:[{removeViewBox: false}],
                 interlaced:true,
-                optimizationLevel: 3 //1 - 7
+                optimizationLevel: 6 //1 - 7
             })
         )
         .pipe(dest(path.build.img))

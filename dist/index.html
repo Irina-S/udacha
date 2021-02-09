@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/my-grid.css">
-    <link rel="stylesheet" href="css/style.css?v=1.0.4">
-    <link rel="stylesheet" href="css/responsive.css?v=1.0.4">
+    <link rel="stylesheet" href="css/style.css?v=1.0.8">
+    <link rel="stylesheet" href="css/responsive.css?v=1.0.8">
+    <style>
+        .exp-list {
+            height: 85%;
+        }
+    </style>
     <title>Удача</title>
 </head>
 <body>
@@ -29,7 +35,19 @@
         <div class="container">
             <div class="header__body">
                 <div class="logo">
-                    <a href="#"><img src="img/logo.svg" alt="логотип"></a>
+                    <a href="#"><img src="img/logo.png" alt="логотип"></a>
+                </div>
+                <div class="lang-block">
+                    <div class="lang__cur-lang">
+                        <img src="img/lang-ru.svg" alt="ru">
+                        <span>Ru</span>
+                        <img src="img/arrow-up.svg" alt="" class="lang__arrow">
+                    </div>
+                    <ul class="lang-list">
+                        <li class="lang-list__item"><a href=""><img src="img/lang-ru.svg" alt="ru"><span>Ru</span></a></li>
+                        <li class="lang-list__item"><a href=""><img src="img/lang-en.svg" alt="en"><span>En</span></a></li>
+                        <li class="lang-list__item"><a href=""><img src="img/lang-zn.svg" alt="zn"><span>Zn</span></a></li>
+                    </ul>
                 </div>
                 <nav class="nav">
                     <ul class="nav-list">
@@ -78,15 +96,28 @@
     <section class="exp"> 
         <div class="container">
             <div class="row exp__body">
-                <div class="col-6 col-lg-4 exp__left">
+                <div class="col-6 col-lg-5 exp__left">
                     <!-- <div class="exp__text-block"></div> -->
                     <h2 class="section-title">В чем мы разбираемся, наш опыт и преимущество</h2>
                     <div class="exp__desc">
-                        Мы предоставляем необходимые инструменты для оптимизации издержек в бизнесе, организации эффективных схем внешнеэкономической деятельности, организации и легализации бизнеса в Китае.
+                        <p>ООО «УДАЧА» подразумевает полное сопровождение и оформление сопроводительных документов по заключению контракта , и нахождение партнеров на территории РФ и КНР, опыт работы на рынке двух государств .</p>
+                        <p>Экспорт товаров за границу вместе с нами – это гарантия качественной и экономически выгодной внешнеэкономической деятельности при полном соблюдении всех правил и норм современного законодательства.</p>
+                        <p>Сотрудничество с нашей компанией поможет вам организовать эффективную и выгодную доставку за рубеж в короткие сроки.</p>
+                        <p>Если вы также высоко, как и мы цените такие качества как:
+                            <ul class="desc-list">
+                                <li class="desc-list__item">Ответственность и аккуратность;</li>
+                                <li class="desc-list__item">Пунктуальность и высокий профессионализм;</li>
+                                <li class="desc-list__item">Умение быстро принять правильное решение при возникновении непредвиденных обстоятельств;</li>
+                                <li class="desc-list__item">Надежность и справедливые тарифы;</li>
+                                <li class="desc-list__item">Вежливость и лучший сервис.</li>
+                            </ul>
+                        </p>
+                        <p>Мы готовы стать для наших клиентов настоящим партнером, на которого всегда можно полностью положиться в вопросах доставки, оформления грузов, а также оказания .</p>
+                        <p>Мы готовы гарантировать индивидуальный подход к конкретно вашей экспортной сделке и выполнение всех своих обязательств на самом высоком уровне.</p>
                     </div>
                     <a href="#modal-request" class="btn">Начать сотрудничество <img class="btn__arrow" src="img/arrow.svg" alt=""></a>
                 </div>
-                <div class="col-6 col-lg-8 exp__right">
+                <div class="col-6 col-lg-7 exp__right">
                 <ul class="exp-list">
                     <li class="exp-list__item">
                         <img class="exp-list__icon" src="img/handshake.svg" alt="">
@@ -119,6 +150,30 @@
             </div>
         </div>
     </section>
+    <div class="main-slider__wrapper">
+        <div class="main-slider" id="main-slider">
+            <div>
+                <picture>
+                    <source srcset="img/slide1m2.png" media="(max-width: 450px)">
+                    <source srcset="img/slide1m.png" media="(max-width: 700px)">
+                    <source srcset="img/slide1.png" media="(min-width: 701px)">
+                    <img src="img/slide1.png" alt="слайд1">
+                </picture>
+            </div>
+            
+            <div>
+                <picture>
+                    <source srcset="img/slide2m2.png" media="(max-width: 450px)">
+                    <source srcset="img/slide2m.png" media="(max-width: 700px)">
+                    <source srcset="img/slide2.png" media="(min-width: 701px)">
+                    <img src="img/slide2.png" alt="слайд2">
+                </picture>
+            </div>
+            
+        </div>
+        <div class="main-slider__nav"></div>
+    </div>
+    
     <div class="wrapper">
         <a href="" name="profit"></a>
         <section class="profit">
@@ -206,7 +261,7 @@
         <div class="container">
             <div class="footer__body">
                 <div class="footer__left-block">
-                    <a href="#"><img src="img/logo.svg" alt="логотип" class="logo"></a>
+                    <a href="#"><img src="img/logo.png" alt="логотип" class="logo"></a>
                     <div class="footer__text"><span>© ООО «УДАЧА». </span><span>Все права защищены.</span></div>
                 </div>
                 <div class="footer__right-block">
@@ -239,7 +294,7 @@
         </form>
         <div class="modal__text" id="data">Нажимая на кнопку «Оставить заявку», вы соглашаетесь с <a href="#" class="text_highligted-bold">политикой конфиденциальности</a></div>
     </div>
-    <div class="modal modal-success mfp-hide">
+    <div class="modal modal-success mfp-hide" id="modal-success">
         <a href="#" class="modal__cross"><img src="img/cross.svg" alt="закрыть"></a>
         <div class="modal-success__inner">
             <img src="img/modal-success.svg" alt="">
@@ -251,8 +306,10 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/sticky.min.js"></script>
     <script src="js/cleave.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/map.js"></script>
-    <script src="js/script.js?v=1.0.3"></script>
+    <script src="js/script.js?v=1.0.6"></script>
 </body>
 </html>

@@ -61,6 +61,16 @@ $rose:#FF2535;
         bottom: 250px;
         left:calc((100vw - 1110px) / 2);
     }
+
+    .main-slider{
+        &__nav{
+            height: 70px;
+
+            .slick-arrow{
+                height: 70px;
+            }
+        }
+    }
 }
 
 @media (max-width:1250px){
@@ -74,6 +84,11 @@ $rose:#FF2535;
 }
 
 @media (max-width:1199px){
+
+    .nav{
+        display: none;
+    }
+
     .first-screen{
         &__img{
             width: 530px;
@@ -119,25 +134,26 @@ $rose:#FF2535;
         left:calc((100vw - 930px) / 2);
     }
 
-    .contacts{
-        &__callback{
-            padding-left: 28px;
+    .contacts{  
+        // margin-right: -48%;
+        margin-right: 20px;
+        margin-left: auto;
+
+        &__phone{
+            margin-top: 6px;
+
+            &-link{
+                font-size: 0;
+
+                i{
+                    font-size: 26px;
+                }
+            }
         }
-    }
-}
+        &__callback{
+            display: none;
+        }
 
-@media (max-width:991px){
-    .btn {
-        padding: 18px 25px 18px;
-    }
-
-    .header{
-        top:30px;
-    }
-
-    .nav{
-        display:none;
-        // display:none;
     }
 
     .mobile-nav{
@@ -146,7 +162,7 @@ $rose:#FF2535;
         position:fixed;
         width: 100%;
         height:calc(100vh);
-        padding-top:110px;
+        padding-top: 125px;
         // background-color: rgb(155, 43, 43);
         background-color: $blue;
         transform: translateY(-100%);
@@ -180,6 +196,7 @@ $rose:#FF2535;
         position:relative;
         width:25px;
         height:20px;
+        margin-right: 40px;
         // display: flex;
         // flex-direction: column;
         // justify-content: space-between;
@@ -227,24 +244,37 @@ $rose:#FF2535;
         }
     }
 
-    .contacts{
-        margin-right: -45%;
+    .main-slider{
+        &__nav{
+            height: 55px;
 
-        &__phone{
-            margin-top: 6px;
+            .slick-arrow{
+                height: 55px;
 
-            &-link{
-                font-size: 0;
-
-                i{
-                    font-size: 26px;
+                img{
+                    width: 40px;
                 }
             }
         }
-        &__callback{
-            display: none;
-        }
+    }
 
+    .lang-block{
+        margin-left: 40px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width:991px){
+    .btn {
+        padding: 18px 25px 18px;
+    }
+
+    .header{
+        top:30px;
+    }
+
+    .nav{
+        // display:none;
     }
 
     .first-screen{
@@ -349,6 +379,12 @@ $rose:#FF2535;
 
         &__text{
             margin-left: 30px;
+        }
+    }
+
+    .main-slider{
+        &__nav{
+            
         }
     }
 }
@@ -491,8 +527,42 @@ $rose:#FF2535;
             }
         }
     }
+
+    .main-slider{
+        &__wrapper{
+            margin-bottom: 50px;
+        }
+
+        &__nav{
+            height: 45px;
+            transform: translateY(100%);
+
+            .slick-arrow{
+                height: 45px;
+                border:none;
+
+                img{
+                    width: 35px;
+                }
+            }
+        }
+    }
 }
 
+@media (max-width:700px){
+    .main-slider__nav {
+        left: 50%;
+        transform:translate(-50%, 100%);
+    }
+
+    .contacts {
+        // margin-right: -45%;
+    }
+
+    .mobile-toggle {
+        // margin-right: 55px;
+    }
+}
 @media (max-width:640px){
     .first-screen{
         min-height: 450px;
@@ -592,6 +662,9 @@ $rose:#FF2535;
         // margin-bottom: 77px;
     }
     
+    .contacts {
+        // margin-right: -43%;
+    }
 }
 
 @media (max-width:500px){
@@ -687,7 +760,23 @@ $rose:#FF2535;
     }
 
     .contacts {
-        margin-right: -20%;
+        margin-right: 5px;
+    }
+
+    .lang-block{
+        margin-left: 15px;
+        margin-right:auto;
+        margin-top: 0;
+    }
+
+    .main-slider{
+        &__nav{
+            .slick-arrow{
+                img{
+                    width: 28px;
+                }
+            }
+        }
     }
 }
 
@@ -731,5 +820,13 @@ $rose:#FF2535;
             margin-top: 30px;
             margin-left: 0;
         }
+    }
+
+    .contacts {
+        margin-right: -24%;
+    }
+
+    .lang-block{
+        margin-left: 10px;
     }
 }
